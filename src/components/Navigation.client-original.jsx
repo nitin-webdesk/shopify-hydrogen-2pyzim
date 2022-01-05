@@ -4,22 +4,6 @@ export default function Navigation({collections}) {
   return (
     <nav className="hidden lg:block text-center">
       <ul className="md:flex items-center justify-center">
-        <li>
-          <Link
-            to={"/"}
-            className="block p-4 hover:opacity-80">
-              Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={"/collections"}
-            className="block p-4 hover:opacity-80">
-              Collections
-          </Link>
-
-        </li>
-
         {collections.map((collection) => (
           <li key={collection.id}>
             <Link

@@ -62,6 +62,7 @@ function CartItems() {
         <div role="columnheader">Product image</div>
         <div role="columnheader">Product details</div>
         <div role="columnheader">Price</div>
+        <div role="columnheader">Totel</div>
       </div>
       <CartLines>
         {({merchandise}) => (

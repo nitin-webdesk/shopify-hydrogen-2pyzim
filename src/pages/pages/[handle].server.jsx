@@ -15,6 +15,8 @@ export default function Page() {
 
   const page = data.pageByHandle;
 
+  console.log(data);
+
   return (
     <Layout>
       <h1 className="text-2xl font-bold">{page.title}</h1>

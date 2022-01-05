@@ -43,30 +43,7 @@ function StorefrontInfo({shopName, totalProducts, totalCollections}) {
         {', '}
         {pluralize(totalCollections, 'Collection')}
       </p>
-      {totalProducts === 0 && totalCollections === 0 && (
-        <div className="py-2 px-3 bg-red-100 text-md">
-          Use the{' '}
-          <a
-            href="https://shopify.dev/apps/tools/cli/getting-started"
-            className="text-primary font-mono font-bold underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Shopify CLI
-          </a>{' '}
-          to populate sample products and collections.
-        </div>
-      )}
-      <hr className="my-4" />
-      <a
-        href="https://shopify.dev/custom-storefronts/hydrogen/getting-started#update-information-about-your-shopify-storefront"
-        className="text-md inline-flex items-center text-blue-700 font-medium hover:underline"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Change your storefront access token
-        <ExternalIcon />
-      </a>
+    
     </div>
   );
 }
@@ -122,22 +99,12 @@ export default function Welcome() {
     <div className="text-gray-900 pt-16 rounded-[40px] my-16 px-4 xl:px-12 bg-gradient-to-b from-white -mx-4 xl:-mx-12">
       <div className="text-center mb-16">
         <h1 className="font-extrabold mb-4 text-5xl md:text-7xl">
-          Hello, Hydrogen
+          Hello, Demo Store
         </h1>
         <p className="text-lg mb-8">
           Welcome to your custom storefront. Let&rsquo;s get building.
         </p>
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 text-gray-700">
-          <DocsButton
-            url="https://shopify.dev/custom-storefronts/hydrogen"
-            label="Browse Hydrogen documentation"
-          />
-          <DocsButton url="/graphql" label="Open the GraphiQL explorer" />
-          <DocsButton
-            url="https://github.com/Shopify/hydrogen-examples"
-            label="Explore Hydrogen examples"
-          />
-        </div>
+       
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <StorefrontInfo

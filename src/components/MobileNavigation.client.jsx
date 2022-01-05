@@ -21,6 +21,24 @@ export default function MobileNavigation({collections, isOpen, setIsOpen}) {
         {isOpen ? (
           <div className="absolute -left-0 top-20 w-full h-screen z-10 bg-gray-50 px-4 md:px-12 py-7">
             <ul>
+              <li className="border-b border-gray-200" key="Home">
+                <Link
+                  className="group py-5 text-gray-700 flex items-center justify-between"
+                  to={`/`}
+                  onClick={() => setIsOpen(false)}>
+                    Home
+                    <ArrowRightIcon className="hidden group-hover:block" />
+                </Link>
+              </li>
+              <li className="border-b border-gray-200" key="Collection">
+                <Link
+                  className="group py-5 text-gray-700 flex items-center justify-between"
+                  to={`/collections`}
+                  onClick={() => setIsOpen(false)}>
+                    Collections
+                    <ArrowRightIcon className="hidden group-hover:block" />
+                  </Link>
+              </li>
               {collections.map((collection) => (
                 <li className="border-b border-gray-200" key={collection.id}>
                   <Link
